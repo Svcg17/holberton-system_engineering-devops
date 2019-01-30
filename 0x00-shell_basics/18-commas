@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -alpm
+l -alpm
