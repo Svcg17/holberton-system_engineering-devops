@@ -1,2 +1,2 @@
-#!/bin/bash
-project: bash shell basics 
+# holberton-system_engineering-devops
+## 0x00. Shell, basics
