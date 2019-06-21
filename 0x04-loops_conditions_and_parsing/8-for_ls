@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
+#Bash script that displays string 
 for i in *; do
 	echo "$i" | cut -d '-' -f2
 done
-
