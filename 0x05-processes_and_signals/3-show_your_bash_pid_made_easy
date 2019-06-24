@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+pgrep -w bash -l
