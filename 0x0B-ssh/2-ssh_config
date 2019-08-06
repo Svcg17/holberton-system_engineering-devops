@@ -54,6 +54,6 @@ Host *
     GSSAPIDelegateCredentials no
 
 Host ubuntu
-    HostName 35.231.90.80
+    HostName 34.74.112.10
     IdentityFile ~/.ssh/holberton    
     PasswordAuthentication no
