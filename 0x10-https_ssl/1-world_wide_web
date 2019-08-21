@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Script that displays information about subdomains.
+
+if [ "$#" -eq 1 ];
+then
+	dig "www.$1" | grep -A1 'ANSWER SECTION:' | awk '{ print "The subdomain www is a "$4" record and points to "$5""}' | tail -n 1
+	dig "lb-01.$1" | grep -A1 'ANSWER SECTION:' | awk '{ print "The subdomain lb-01 is a "$4" record and points to "$5""}' | tail -n 1
+	dig "web-01.$1" | grep -A1 'ANSWER SECTION:' | awk '{ print "The subdomain web-01 is a "$4" record and points to "$5""}' | tail -n 1
+	dig "web-02.$1" | grep -A1 'ANSWER SECTION:' | awk '{ print "The subdomain web-02 is a "$4" record and points to "$5""}' | tail -n 1
+
+elif [ "$#" -eq 2 ];
+then
+	name="$2.$1"
+	dig "$name" | grep -A1 'ANSWER SECTION:' | awk '{ split($1, a, "."); print "The subdomain "a[1]" is a "$4" record and points to "$5""}' | tail -n 1
+
+else
+	echo "The subdomain [SUB_DOMAIN] is a [RECORD_TYPE] record and points to [DESTINATION]"
+fi
+
