@@ -39,23 +39,17 @@ defaults
 
 
 frontend http_front
-	bind 34.74.112.10:80
+	bind *:80
 	reqadd X-Forwarded-Proto:\ http
 	default_backend http_back
 
 frontend https_front
-	bind 34.74.112.10:443 ssl crt /etc/haproxy/certs/sofivism.tech.pem
+	bind *:443 ssl crt /etc/haproxy/certs/sofivism.tech.pem
    	reqadd X-Forwarded-Proto:\ https
-   	acl letsencrypt-acl path_beg /.well-known/acme-challenge/
-   	use_backend letsencrypt-backend if letsencrypt-acl
    	default_backend http_back
 
 backend http_back
 	balance roundrobin
-	mode http
 	redirect scheme https if !{ ssl_fc }
 	server web-01 35.227.98.159:80 check
 	server web-02 104.196.65.233:80 check
-
-backend letsencrypt-backend
-   	server letsencrypt 127.0.0.1:54321
