@@ -2,5 +2,6 @@
 #Takes one argument and runs the woami command for that argument
 if [ "$#" -eq 1 ]
 then
+	sudo useradd "$1"
 	sudo -u "$1" whoami
 fi
