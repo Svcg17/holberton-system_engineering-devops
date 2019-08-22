@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#Takes one argument and runs the woami command for that argument
+if [ "$#" -eq 1 ]
+then
+	id -u "$1" &>/dev/null || sudo useradd "$1" 
+	sudo -u "$1" bash -c 'whoami'
+fi
