@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
+#set up ufw firewall
 sudo apt-get install ufw
-sudo utf allow 22
-sudo utf allow 443
-sudo utf allow 80
+sudo ufw allow 22
+sudo ufw allow 443
+sudo ufw allow 80
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw enable
