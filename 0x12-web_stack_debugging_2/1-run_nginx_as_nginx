@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Configures container to run Nginx as nginx user
+pkill apache2
+echo  "user nginx;" >> /etc/nginx/nginx.conf
+sed -i 's/\blisten 80\b/&80/' /etc/nginx/sites-available/default
+sed -i 's/\blisten \[::\]:80\b/&80/'  /etc/nginx/sites-available/default
+chmod 755 /etc/nginx/nginx.conf
+sudo -u nginx bash -c 'service nginx restart'
