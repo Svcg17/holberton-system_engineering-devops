@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+sudo apt-get install ufw
+sudo utf allow 22
+sudo utf allow 443
+sudo utf allow 80
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw enable
