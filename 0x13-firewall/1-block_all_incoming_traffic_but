@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-#set up ufw firewall
 sudo apt-get install ufw
 sudo ufw allow 22
 sudo ufw allow 443
