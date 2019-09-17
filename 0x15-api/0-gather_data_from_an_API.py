@@ -3,8 +3,8 @@
 his/her TODO list progress
 """
 if __name__ == "__main__":
-    from sys import argv
     import requests
+    from sys import argv
 
     completed = 0
     total_t = 0
