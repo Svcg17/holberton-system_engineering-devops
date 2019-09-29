@@ -1,4 +1,4 @@
-#0x14.Mysql
+# 0x14.Mysql
 
 ## Learning Objectives
 - What is the main role of a database
