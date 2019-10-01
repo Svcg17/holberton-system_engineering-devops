@@ -37,6 +37,9 @@ Projects | Description
 [0x14-mysql](./0x14-mysql) | Introduction to Database clusters and setting up a Primary-Replica MySQL cluster on our own servers
 [0x15-api](./0x15-api) | APIs
 [0x16-api_advanced](./0x16-api_advanced) | More advanced APIs
+[0x17-web_stack_debugging_3](./0x17-web_stack_debugging_3) | Web debbuging 3
+[0x18. Webstack monitoring](./0x18. Webstack monitoring) | Webstack monitoring with datadog
+
 
 ---
 
