@@ -30,15 +30,13 @@ add_header X-Served-By $hostname;
 	include proxy_params;
 	proxy_pass http://0.0.0.0:5000;
 	}
-
 	location /airbnb-dynamic/number_odd_or_even/ {
 	include proxy_params;
 	proxy_pass http://0.0.0.0:5001/number_odd_or_even/;
 	}
-
-	location /api/v1/states {
+	location /api/ {
 	include proxy_params;
-	proxy_pass http://0.0.0.0:5002;
+	proxy_pass http://0.0.0.0:5002/api/;
 	}
 
 	# SSL configuration
