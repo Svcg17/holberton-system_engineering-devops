@@ -30,13 +30,15 @@ add_header X-Served-By $hostname;
 	include proxy_params;
 	proxy_pass http://0.0.0.0:5000;
 	}
+
 	location /airbnb-dynamic/number_odd_or_even/ {
 	include proxy_params;
 	proxy_pass http://0.0.0.0:5001/number_odd_or_even/;
 	}
+
 	location /api/ {
 	include proxy_params;
-	proxy_pass http://0.0.0.0:5002/api/;
+	proxy_pass http://0.0.0.0:5002;
 	}
 
 	# SSL configuration
@@ -66,8 +68,8 @@ add_header X-Served-By $hostname;
 		# First attempt to serve request as file, then
 		# as directory, then fall back to displaying a 404.
 		try_files $uri $uri/ =404;
-	}
 
+	}
 	# pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
 	#
 	#location ~ \.php$ {
