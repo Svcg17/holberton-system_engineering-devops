@@ -185,3 +185,8 @@ mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
 news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
 holberton@079b7269ec1b:~$
 ```
+
+
+## Author
+* **Sofia Cheung** - [Svcg17](https://github.com/Svcg17)
+
